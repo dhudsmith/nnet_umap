@@ -2,10 +2,16 @@
 
 This repository shows how to make pictures like the one above. 
 
+This simple repo contains code for training a VAE on fashion MNIST data and 
+then using the encoder from the VAE to generate features for each fashion
+MNIST image. These are then used as the inputs for the UMAP projection.
+The latter relies heavily on the excellent [`umap-learn`](https://github.com/lmcinnes/umap)
+python library.
+
 ### Set up the environment
 Clone this repository somewhere:
 ```bash
-git clone ...
+git clone https://github.com/dhudsmith/nnet_umap.git
 ```
 
 With anaconda installed, navigate to the project root and execute
@@ -38,5 +44,6 @@ Run through `umap_projection.ipynb` to generate the visual. Note the settings at
 these control the number of data points used, the color scheme, 
 the resolution, and the size of data points. The code can take an hour or more
 run if you use lots of data points. The default parameters should run in a few minutes
-on most machines.
-  
+on most machines. If all goes well, you should get something like this with default settings:
+![umap example](images/umap_fire.png)
+
